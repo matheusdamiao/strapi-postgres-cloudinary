@@ -1,0 +1,53 @@
+{
+  "kind": "collectionType",
+  "collectionName": "empresas",
+  "info": {
+    "singularName": "empresa",
+    "pluralName": "empresas",
+    "displayName": "Empresa"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nome": {
+      "type": "string",
+      "required": false
+    },
+    "documentos": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "dono": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "area": {
+      "type": "string"
+    },
+    "cidade": {
+      "type": "string"
+    },
+    "endereco": {
+      "type": "text"
+    },
+    "descricao": {
+      "type": "text"
+    },
+    "CNPJ": {
+      "type": "string"
+    },
+    "aberta": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}
