@@ -9,8 +9,7 @@
     "displayName": "User"
   },
   "options": {
-    "draftAndPublish": false,
-    "timestamps": true
+    "draftAndPublish": false
   },
   "attributes": {
     "username": {
@@ -63,23 +62,19 @@
       "inversedBy": "users",
       "configurable": false
     },
-    "empresas": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::empresa.empresa"
-    },
     "nome": {
       "type": "string"
     },
     "documentos": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": true
+      ]
     },
     "CPF": {
       "type": "string"
@@ -88,14 +83,24 @@
       "type": "string"
     },
     "avatar": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
+    },
+    "telefone": {
+      "type": "string"
+    },
+    "empresa": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::empresa.empresa",
+      "inversedBy": "dono"
     }
   }
 }

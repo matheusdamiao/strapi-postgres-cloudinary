@@ -26,6 +26,20 @@
     },
     "data": {
       "type": "date"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "texto": {
+      "type": "text"
     }
   }
 }
