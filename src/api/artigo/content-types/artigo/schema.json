@@ -39,7 +39,7 @@
       ]
     },
     "texto": {
-      "type": "text"
+      "type": "richtext"
     }
   }
 }
