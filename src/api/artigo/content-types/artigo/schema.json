@@ -18,12 +18,6 @@
     "subtitulo": {
       "type": "string"
     },
-    "autors": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::autor.autor",
-      "mappedBy": "artigo"
-    },
     "data": {
       "type": "date"
     },
@@ -40,6 +34,12 @@
     },
     "texto": {
       "type": "richtext"
+    },
+    "autors": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::autor.autor",
+      "mappedBy": "artigos"
     }
   }
 }

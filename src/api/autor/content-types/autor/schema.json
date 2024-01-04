@@ -21,11 +21,21 @@
     "biografia": {
       "type": "string"
     },
-    "artigo": {
+    "artigos": {
       "type": "relation",
-      "relation": "manyToOne",
+      "relation": "manyToMany",
       "target": "api::artigo.artigo",
       "inversedBy": "autors"
+    },
+    "avatar": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }
